@@ -1,0 +1,112 @@
+# PlantG - Manual Setup and Startup Guide
+
+This document provides step-by-step instructions for starting the PlantG application manually without using any scripts.
+
+## Prerequisites
+- MongoDB installed on your system
+- Python 3.9+ with pip
+- Node.js (v14 or higher)
+- npm or yarn
+
+## 1. Start MongoDB
+
+MongoDB must be running before starting the backend server:
+
+```bash
+# Create MongoDB data directory if it doesn't exist
+mkdir -p ~/mongodb-data/db
+
+# Start MongoDB service
+mongod --dbpath ~/mongodb-data/db
+```
+
+Keep this terminal window open. MongoDB will run in the foreground.
+
+## 2. Setup and Start Backend
+
+Open a new terminal window and follow these steps:
+
+```bash
+# Navigate to the backend directory
+cd /Users/shikharpratapsingh/Desktop/Projects/plantG/Backend/core-backend
+
+# Create a virtual environment (if it doesn't exist)
+python3 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate
+
+# Install required Python packages
+pip install -r requirements.txt
+
+# Ensure the admin user exists in the database
+python3 create_admin.py
+
+# Create symlink to dataset (if needed and if the dataset exists)
+ln -sf /Users/shikharpratapsingh/Desktop/Projects/plantG/dataset/PlantVillage plant_disease_dataset
+
+# Start the Flask backend server
+python3 app.py
+```
+
+This will start the backend server on http://localhost:5001. Keep this terminal window open.
+
+## 3. Setup and Start Frontend
+
+Open a third terminal window and follow these steps:
+
+```bash
+# Navigate to the frontend directory
+cd /Users/shikharpratapsingh/Desktop/Projects/plantG/frontend
+
+# Install Node.js dependencies
+npm install
+
+# Start the frontend development server
+npm run dev
+```
+
+This will start the frontend server on http://localhost:5173 (or an alternative port if 5173 is in use).
+
+## 4. Accessing the Application
+
+- Frontend: http://localhost:5173 (check terminal output for the exact URL)
+- Backend API: http://localhost:5001
+- API Health Check: http://localhost:5001/api/health
+
+## 5. Login Information
+
+Use the following credentials to log in:
+- Email: shikhar@plantg.com
+- Password: admin
+
+## 6. Stopping the Services
+
+To stop all services:
+
+1. Stop the frontend server: Press Ctrl+C in the frontend terminal
+2. Stop the backend server: Press Ctrl+C in the backend terminal 
+3. Stop MongoDB: Press Ctrl+C in the MongoDB terminal
+
+## Troubleshooting
+
+### If You Can't Connect to MongoDB
+Ensure MongoDB is running and the connection string in the backend configuration is correct.
+
+### If the Backend Server Fails to Start
+- Check if the required Python packages are installed
+- Ensure MongoDB is running
+- Check for port conflicts (another service might be using port 5001)
+
+### If the Frontend Fails to Start
+- Check if Node.js and npm are properly installed
+- Ensure all dependencies are installed with npm install
+- Check for port conflicts
+
+### Common Python/Node.js Issues
+- If "python" command is not found, try using "python3" instead
+- If npm is not found, ensure Node.js is properly installed and in your PATH
+
+### Testing the Application
+1. Upload sample plant images from the /Backend/core-backend/sample_images/ directory
+2. View analysis results and check the History page to see past analyses 
