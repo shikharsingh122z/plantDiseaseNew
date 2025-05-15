@@ -10,8 +10,9 @@ from bson import ObjectId
 # Load environment variables
 load_dotenv()
 
-# MongoDB connection string
-MONGODB_URI = os.getenv("MONGODB_URI")
+# MongoDB connection string and database name
+MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017/")
+MONGODB_DB = os.getenv("MONGODB_DB", "plantg")
 
 # Custom JSON encoder to handle MongoDB ObjectId and dates
 class MongoJSONEncoder(json.JSONEncoder):
@@ -34,8 +35,8 @@ class Database:
             # Only create a new connection if one doesn't exist
             if self.client is None:
                 self.client = MongoClient(MONGODB_URI)
-                self.db = self.client.get_database()
-                print(f"Connected to MongoDB: {self.db.name}")
+                self.db = self.client[MONGODB_DB]
+                print(f"Connected to database: {self.db.name}")
                 
                 # Create indexes for better performance
                 self.db.users.create_index([("email", pymongo.ASCENDING)], unique=True)

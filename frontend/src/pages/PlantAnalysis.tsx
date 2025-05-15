@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaCloudUploadAlt, FaCamera, FaLeaf } from 'react-icons/fa'
+import { logApiRequest, logDiseasePrediction, logError } from '../logger'
 
 const PlantAnalysis = () => {
   const [activeTab, setActiveTab] = useState('main') // 'main' or 'kids'
@@ -28,37 +29,47 @@ const PlantAnalysis = () => {
   }
 
   // Handle analysis submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!file) return
     
     setIsAnalyzing(true)
     
-    // Simulate API call with a timeout
-    setTimeout(() => {
-      // Example result data
-      const demoResult = {
-        disease: 'Tomato Late Blight',
-        confidence: 97.5,
-        description: 'Late blight is a devastating disease caused by the fungus-like oomycete pathogen Phytophthora infestans. It can rapidly destroy tomato plants, especially in cool, wet conditions.',
-        symptoms: [
-          'Dark, water-soaked spots on leaves',
-          'White, fuzzy growth on the undersides of leaves',
-          'Brown lesions on stems',
-          'Firm, dark, greasy-looking spots on fruits'
-        ],
-        treatments: [
-          'Remove and destroy affected plant parts',
-          'Apply copper-based fungicide as a preventative measure',
-          'Ensure good air circulation around plants',
-          'Water at the base of plants, avoiding wet foliage',
-          'Rotate crops yearly'
-        ]
+    try {
+      const formData = new FormData()
+      formData.append('file', file)
+      
+      logApiRequest('api/detect', 'POST', 0, undefined, { filename: file.name })
+      
+      const response = await fetch('http://localhost:5001/api/detect', {
+        method: 'POST',
+        body: formData,
+      })
+      
+      const data = await response.json()
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to analyze plant')
       }
       
-      setResult(demoResult)
+      setResult(data)
+      
+      // Log successful prediction
+      logDiseasePrediction(data.disease, undefined, { 
+        imageId: data.image_id,
+        timestamp: new Date().toISOString()
+      })
+      
+      logApiRequest('api/detect', 'POST', response.status, undefined, 
+        { filename: file.name },
+        { success: true }
+      )
+    } catch (error) {
+      console.error('Error analyzing plant:', error)
+      logError('Error analyzing plant: ' + (error instanceof Error ? error.message : String(error)))
+    } finally {
       setIsAnalyzing(false)
-    }, 2000)
+    }
   }
 
   // Reset the analysis
@@ -199,9 +210,6 @@ const PlantAnalysis = () => {
                         <div className="bg-primary-50 rounded-lg p-4 text-center">
                           <h3 className="font-semibold text-primary-700">Diagnosis</h3>
                           <p className="text-2xl font-bold text-primary-800 mb-1">{result.disease}</p>
-                          <div className="inline-block bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">
-                            {result.confidence}% Confidence
-                          </div>
                         </div>
                       </div>
                       
