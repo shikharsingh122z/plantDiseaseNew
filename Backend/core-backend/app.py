@@ -416,6 +416,6 @@ def receive_logs():
 # def shutdown_session(exception=None):
 #     db.close()
 
-if __name__ == '__main__':
-    port = int(os.getenv("PORT", 5001))
-    app.run(host='0.0.0.0', port=port, debug=True) 
+if __name__ == "__main__":
+    # Run the server
+    app.run(host='0.0.0.0', port=5001, debug=True) 
