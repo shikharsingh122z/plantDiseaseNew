@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 from model import PlantDiseaseModel
 from database import db, MongoJSONEncoder
 from auth import generate_token, token_required, admin_required
+from logger import logger, log_prediction, log_api_request, log_error
 
 # Load environment variables
 load_dotenv()
@@ -35,16 +36,26 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # Initialize model with error handling
 try:
     # Try to load the model with pretrained weights
-    model_path = os.getenv("MODEL_PATH", os.path.join('models', 'inception_v3_plant_disease.pth'))
+    model_path = os.getenv("MODEL_PATH", os.path.join('models', 'inception_v3_direct.pth'))
+    logger.info(f"Loading model from path: {model_path}")
+    
     if os.path.exists(model_path):
         model = PlantDiseaseModel(model_path=model_path)
-        print(f"Loaded model from {model_path}")
+        logger.info(f"Successfully loaded model from {model_path}")
     else:
+        logger.warning(f"Model file not found at {model_path}, initializing without weights")
+        
+        # Check if models directory exists, if not create it
+        models_dir = os.path.dirname(model_path)
+        if not os.path.exists(models_dir):
+            os.makedirs(models_dir)
+            logger.info(f"Created models directory: {models_dir}")
+        
         model = PlantDiseaseModel()
-        print("Initialized model without pretrained weights")
+        logger.info("Initialized model without pretrained weights")
 except Exception as e:
-    print(f"Error initializing model: {e}")
-    print("Initializing model without pretrained weights...")
+    logger.error(f"Error initializing model: {e}")
+    logger.info("Initializing model without pretrained weights...")
     model = PlantDiseaseModel()
 
 def allowed_file(filename):
@@ -119,11 +130,13 @@ def get_user_profile(current_user):
 def detect_disease():
     """Public endpoint for plant disease detection without authentication"""
     if 'file' not in request.files:
+        log_error('No file part in the request', context={'endpoint': '/api/detect'})
         return jsonify({'error': 'No file part in the request'}), 400
     
     file = request.files['file']
     
     if file.filename == '':
+        log_error('No file selected', context={'endpoint': '/api/detect'})
         return jsonify({'error': 'No file selected'}), 400
     
     if file and allowed_file(file.filename):
@@ -145,14 +158,27 @@ def detect_disease():
             info = get_disease_info(result['disease'])
             result.update(info)
             
+            # Log the prediction
+            log_prediction(
+                user_id='anonymous',
+                disease=result['disease'],
+                confidence=result['confidence'],
+                image_filename=filename
+            )
+            
+            log_api_request('/api/detect', 'POST', 'anonymous', 200)
+            
             return jsonify(result)
         except Exception as e:
-            return jsonify({'error': str(e)}), 500
+            error_msg = str(e)
+            log_error(error_msg, context={'endpoint': '/api/detect', 'image': filename})
+            return jsonify({'error': error_msg}), 500
         finally:
             # Optionally clean up the file after prediction
             # os.remove(file_path)
             pass
     
+    log_error('Invalid file format', context={'endpoint': '/api/detect', 'filename': file.filename})
     return jsonify({'error': 'Invalid file format. Allowed formats: png, jpg, jpeg'}), 400
 
 @app.route('/api/user/detect', methods=['POST'])
@@ -160,11 +186,13 @@ def detect_disease():
 def detect_disease_authenticated(current_user):
     """Authenticated endpoint for plant disease detection"""
     if 'file' not in request.files:
+        log_error('No file part in the request', current_user['_id'], {'endpoint': '/api/user/detect'})
         return jsonify({'error': 'No file part in the request'}), 400
     
     file = request.files['file']
     
     if file.filename == '':
+        log_error('No file selected', current_user['_id'], {'endpoint': '/api/user/detect'})
         return jsonify({'error': 'No file selected'}), 400
     
     if file and allowed_file(file.filename):
@@ -201,14 +229,27 @@ def detect_disease_authenticated(current_user):
             result.update(info)
             result['_id'] = analysis['_id']
             
+            # Log the prediction
+            log_prediction(
+                user_id=current_user['_id'],
+                disease=result['disease'],
+                confidence=result['confidence'],
+                image_filename=filename
+            )
+            
+            log_api_request('/api/user/detect', 'POST', current_user['_id'], 200)
+            
             return jsonify(result)
         except Exception as e:
-            return jsonify({'error': str(e)}), 500
+            error_msg = str(e)
+            log_error(error_msg, current_user['_id'], {'endpoint': '/api/user/detect', 'image': filename})
+            return jsonify({'error': error_msg}), 500
         finally:
             # Optionally clean up the file after prediction
             # os.remove(file_path)
             pass
     
+    log_error('Invalid file format', current_user['_id'], {'endpoint': '/api/user/detect', 'filename': file.filename})
     return jsonify({'error': 'Invalid file format. Allowed formats: png, jpg, jpeg'}), 400
 
 # History endpoints
@@ -335,11 +376,46 @@ def get_diseases():
         'diseases': list(model.class_labels.values())
     })
 
+# New endpoint for frontend logs
+@app.route('/api/logs', methods=['POST'])
+def receive_logs():
+    """Endpoint to receive logs from frontend"""
+    try:
+        log_data = request.get_json()
+        
+        if not log_data:
+            return jsonify({'error': 'No log data provided'}), 400
+        
+        level = log_data.get('level', 'info')
+        message = log_data.get('message', 'No message provided')
+        user_id = log_data.get('userId', 'anonymous')
+        context = log_data.get('context', {})
+        
+        # Add source information
+        context['source'] = 'frontend'
+        context['userAgent'] = log_data.get('userAgent')
+        
+        if level == 'error':
+            log_error(message, user_id, context)
+        else:
+            log_api_request(
+                endpoint=context.get('endpoint', 'unknown'),
+                method=context.get('method', 'unknown'),
+                user_id=user_id,
+                status_code=context.get('status', 200),
+                request_data=context
+            )
+        
+        return jsonify({'success': True}), 200
+    except Exception as e:
+        log_error(f"Error processing frontend log: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
 # Commenting out the teardown handler that's causing the connection issues
 # @app.teardown_appcontext
 # def shutdown_session(exception=None):
 #     db.close()
 
-if __name__ == '__main__':
-    port = int(os.getenv("PORT", 5001))
-    app.run(host='0.0.0.0', port=port, debug=True) 
+if __name__ == "__main__":
+    # Run the server
+    app.run(host='0.0.0.0', port=5001, debug=True) 

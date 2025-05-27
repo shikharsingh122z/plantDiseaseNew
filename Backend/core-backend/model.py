@@ -7,36 +7,78 @@ import os
 import json
 import platform
 import ssl
+import logging
 
 # Fix for macOS SSL certificate issues
 if platform.system() == 'Darwin':
     ssl._create_default_https_context = ssl._create_unverified_context
 
+# Set up basic logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 class PlantDiseaseModel:
     def __init__(self, model_path=None, num_classes=38):
+        # Initialize model path if not provided
+        if model_path is None:
+            model_path = os.path.join('models', 'inception_v3_direct.pth')
+        
+        logger.info(f"Initializing model with path: {model_path}")
+        
+        # Check if model file exists
+        if os.path.exists(model_path):
+            logger.info(f"Model file found at: {model_path}")
+        else:
+            logger.warning(f"Model file NOT found at: {model_path}")
+            # Try alternative paths
+            alt_paths = [
+                os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models', 'inception_v3_direct.pth'),
+                os.path.join(os.getcwd(), 'models', 'inception_v3_direct.pth')
+            ]
+            for alt_path in alt_paths:
+                if os.path.exists(alt_path):
+                    model_path = alt_path
+                    logger.info(f"Found model at alternative path: {model_path}")
+                    break
+        
         # Initialize the model with Inception V3 architecture
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        print(f"Using device: {self.device}")
+        logger.info(f"Using device: {self.device}")
         
+        # Initialize the model
         try:
-            self.model = models.inception_v3(weights=models.Inception_V3_Weights.IMAGENET1K_V1)
-            print("Loaded Inception V3 with ImageNet pretrained weights")
-        except Exception as e:
-            print(f"Error loading pretrained weights: {e}")
-            print("Initializing Inception V3 without pretrained weights")
+            logger.info("Loading Inception V3 model...")
             self.model = models.inception_v3(weights=None)
-        
-        # Modify the final layer to match our number of plant disease classes
-        in_features = self.model.fc.in_features
-        self.model.fc = nn.Linear(in_features, num_classes)
-        
-        # Load pre-trained weights if provided
-        if model_path and os.path.exists(model_path):
+            logger.info("Inception V3 model loaded without pretrained weights")
+            
+            # Modify the final layer to match our number of plant disease classes
+            in_features = self.model.fc.in_features
+            self.model.fc = nn.Linear(in_features, num_classes)
+            logger.info(f"Final layer modified to output {num_classes} classes")
+            
+            # Load pre-trained weights if provided
+            if os.path.exists(model_path):
+                logger.info(f"Loading weights from {model_path}...")
+                state_dict = torch.load(model_path, map_location=self.device)
+                self.model.load_state_dict(state_dict)
+                logger.info(f"Successfully loaded weights from {model_path}")
+            else:
+                logger.warning(f"Model file not found at {model_path}, using untrained model")
+        except Exception as e:
+            logger.error(f"Error loading model: {e}")
+            # Fallback to ImageNet pretrained model
             try:
-                self.model.load_state_dict(torch.load(model_path, map_location=self.device))
-                print(f"Loaded pre-trained model from {model_path}")
-            except Exception as e:
-                print(f"Error loading model from {model_path}: {e}")
+                logger.info("Falling back to ImageNet pretrained model...")
+                self.model = models.inception_v3(weights=models.Inception_V3_Weights.IMAGENET1K_V1)
+                in_features = self.model.fc.in_features
+                self.model.fc = nn.Linear(in_features, num_classes)
+                logger.info("Using ImageNet pretrained model")
+            except Exception as e2:
+                logger.error(f"Error loading ImageNet model: {e2}")
+                logger.info("Initializing model without pretrained weights")
+                self.model = models.inception_v3(weights=None)
+                in_features = self.model.fc.in_features
+                self.model.fc = nn.Linear(in_features, num_classes)
         
         self.model = self.model.to(self.device)
         self.model.eval()  # Set to evaluation mode
