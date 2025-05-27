@@ -342,3 +342,6 @@
 2025-05-27 23:26:27 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
 2025-05-27 23:26:27 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
 2025-05-27 23:26:27 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-28 00:33:08 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-28 00:33:08 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-28 00:33:09 [INFO] Successfully loaded model from models/inception_v3_direct.pth
