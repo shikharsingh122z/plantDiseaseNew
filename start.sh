@@ -9,7 +9,7 @@ NC='\033[0m' # No Color
 
 # Elasticsearch credentials
 ES_USERNAME="elastic"
-ES_PASSWORD="L3HgosWToiwNdhnC70Fc"
+ES_PASSWORD="zL6VBo2q3SRYIsnS8PMu"
 
 # MongoDB settings
 MONGODB_DB="plantg"

@@ -1,0 +1,3 @@
+2025-05-15 11:36:11 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:36:11 [INFO] Disease Prediction: Test_Disease | Confidence: 99.30% | User: test-user | Image: date_test.jpg
+2025-05-15 11:36:11 [INFO] API Request: GET /api/test | Status: 200 | User: test-user

@@ -1,0 +1,344 @@
+2025-05-15 07:13:52 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:13:52 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:13:53 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:13:55 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:13:55 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:13:55 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:15:00 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:15:01 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.78% | User: anonymous | Image: ead45a71-e8c3-4a25-8a8e-3d8438aa300d.JPG
+2025-05-15 07:15:01 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:15:01 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:15:01 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 07:15:13 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:15:13 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.73% | User: anonymous | Image: 7cea2b96-6ecc-410e-a13e-4ebf1d761057.JPG
+2025-05-15 07:15:13 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:15:13 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:15:13 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 07:15:21 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:15:21 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.77% | User: anonymous | Image: 1b9245f0-129c-45e7-946e-9e05eb055b34.JPG
+2025-05-15 07:15:21 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:15:21 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:15:21 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 07:15:31 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:15:31 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.79% | User: anonymous | Image: 01433208-c1d9-4bd0-9826-f8f7108f3893.JPG
+2025-05-15 07:15:31 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:15:31 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:15:31 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 07:18:32 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:18:32 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:18:32 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:19:10 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:19:10 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:19:10 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:19:54 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:19:54 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:19:55 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:19:57 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:19:57 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:19:58 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:25:39 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:25:39 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:25:39 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:26:39 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:26:39 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:26:39 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:26:41 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:26:41 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:26:42 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:27:13 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:27:13 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.76% | User: anonymous | Image: 24d6c15a-d369-4490-aee0-52c2b1213727.JPG
+2025-05-15 07:27:13 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:27:13 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:27:13 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 07:27:20 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:27:20 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.77% | User: anonymous | Image: c3d6653d-d3ae-46ee-bb36-0416731e96f2.JPG
+2025-05-15 07:27:20 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:27:20 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:27:20 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 07:33:59 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:33:59 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:33:59 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:35:08 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:35:09 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.74% | User: anonymous | Image: 77c8a75d-bf21-4ec1-8400-350678287ad6.JPG
+2025-05-15 07:35:09 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:35:09 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:35:09 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 07:36:26 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:36:26 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:36:27 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:37:39 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:37:39 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:37:40 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:41:52 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:41:52 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.81% | User: anonymous | Image: d9349b93-e9b3-41de-81f3-953fe76b6364.JPG
+2025-05-15 07:41:52 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:41:53 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:41:53 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 07:44:41 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:44:41 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:44:41 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:44:47 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:44:47 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.77% | User: anonymous | Image: 1d7ac4f4-db52-44e7-81fc-c512d9143405.JPG
+2025-05-15 07:44:47 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:44:47 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:44:47 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 07:45:38 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:46:11 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:46:49 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:47:00 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:49:58 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:49:58 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:49:58 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:50:00 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:50:00 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:50:01 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:50:01 [INFO] Disease Prediction: Tomato___Bacterial_spot | Confidence: 2.69% | User: anonymous | Image: 73c2dc82-859b-4122-a923-c64fd6f15fee.jpg
+2025-05-15 07:50:01 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:51:58 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:51:58 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:51:59 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:52:40 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:52:40 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:52:40 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:52:45 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:52:45 [INFO] Disease Prediction: Test_Disease | Confidence: 99.9% | User: test-user | Image: test_image.jpg
+2025-05-15 07:52:45 [INFO] API Request: GET /api/test | Status: 200 | User: test-user
+2025-05-15 07:52:45 [ERROR] Error: Test error message | User: test-user
+2025-05-15 07:54:34 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:54:34 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.76% | User: anonymous | Image: 4a71cbc8-e0af-4720-8208-85458039bc42.JPG
+2025-05-15 07:54:34 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:54:34 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:54:34 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 07:57:37 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:57:37 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:57:37 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:58:34 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 07:58:34 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 07:58:35 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 07:59:02 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 07:59:02 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.8% | User: anonymous | Image: 661689a7-cc24-403b-ae32-0eeba6396202.JPG
+2025-05-15 07:59:02 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 07:59:02 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 07:59:02 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 08:07:20 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 08:07:20 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 08:07:21 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 08:07:30 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 08:07:30 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 08:07:30 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 08:08:16 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 08:08:16 [INFO] Disease Prediction: Potato___healthy | Confidence: 2.8% | User: anonymous | Image: 66daa4c2-d08c-4486-93ee-f8dd0edecd2b.JPG
+2025-05-15 08:08:16 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 08:08:17 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 08:08:17 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 08:12:40 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 08:12:40 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 08:12:41 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 08:13:15 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 08:13:15 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 08:13:16 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 08:13:49 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 08:13:49 [INFO] Disease Prediction: Potato___healthy | Confidence: 97.73% | User: anonymous | Image: 17f3af47-38ce-4ec4-9d13-df5ad62036a1.JPG
+2025-05-15 08:13:49 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 08:13:50 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 08:13:50 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 08:27:20 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 08:27:20 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 08:27:20 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 08:27:34 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 08:27:34 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 08:27:35 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 08:28:01 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 08:28:01 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 08:28:01 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 08:28:34 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 08:28:34 [INFO] Disease Prediction: Potato___healthy | Confidence: 98.58% | User: anonymous | Image: e7a64b70-a904-4457-981a-3ce9b5b2661e.JPG
+2025-05-15 08:28:34 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 08:28:34 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 08:28:34 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 11:12:12 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:12:12 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:12:13 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:12:35 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:12:35 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:12:35 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:18:15 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:18:15 [INFO] Disease Prediction: Potato_healthy | Confidence: 99.06% | User: user2 | Image: test_image_1.jpg
+2025-05-15 11:18:16 [INFO] Disease Prediction: Apple_scab | Confidence: 98.95% | User: guest | Image: test_image_2.jpg
+2025-05-15 11:18:16 [INFO] Disease Prediction: Potato_healthy | Confidence: 98.55% | User: anonymous | Image: test_image_3.jpg
+2025-05-15 11:18:17 [INFO] Disease Prediction: Apple_healthy | Confidence: 96.40% | User: admin | Image: test_image_4.jpg
+2025-05-15 11:18:17 [INFO] Disease Prediction: Apple_healthy | Confidence: 99.68% | User: admin | Image: test_image_5.jpg
+2025-05-15 11:18:18 [INFO] Disease Prediction: Potato_healthy | Confidence: 96.17% | User: admin | Image: test_image_6.jpg
+2025-05-15 11:18:18 [INFO] Disease Prediction: Potato_healthy | Confidence: 97.16% | User: user2 | Image: test_image_7.jpg
+2025-05-15 11:18:19 [INFO] Disease Prediction: Potato_healthy | Confidence: 96.92% | User: anonymous | Image: test_image_8.jpg
+2025-05-15 11:18:20 [INFO] Disease Prediction: Tomato_healthy | Confidence: 98.38% | User: anonymous | Image: test_image_9.jpg
+2025-05-15 11:18:20 [INFO] Disease Prediction: Apple_healthy | Confidence: 98.10% | User: anonymous | Image: test_image_10.jpg
+2025-05-15 11:18:21 [INFO] API Request: POST /api/user/analyses | Status: 200 | User: guest
+2025-05-15 11:18:21 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 11:18:22 [INFO] API Request: GET /api/health | Status: 500 | User: guest
+2025-05-15 11:18:22 [INFO] API Request: GET /api/detect | Status: 400 | User: anonymous
+2025-05-15 11:18:23 [INFO] API Request: GET /api/user/detect | Status: 200 | User: admin
+2025-05-15 11:18:23 [ERROR] Error: Image processing error | User: guest
+2025-05-15 11:18:24 [ERROR] Error: Image processing error | User: guest
+2025-05-15 11:18:24 [ERROR] Error: Authentication failed | User: user2
+2025-05-15 11:18:57 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:18:57 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:18:58 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:19:19 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 11:19:19 [INFO] Disease Prediction: Potato___healthy | Confidence: 98.22% | User: anonymous | Image: 14df6c2d-7d90-40ea-a668-ef2c4c546598.JPG
+2025-05-15 11:19:19 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 11:19:19 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 11:19:19 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 11:21:19 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:21:19 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:21:20 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:21:22 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:21:22 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:21:22 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:21:56 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 11:21:56 [INFO] Disease Prediction: Potato___healthy | Confidence: 96.77% | User: anonymous | Image: bf97f6d8-f301-475c-9ce8-667763db8615.JPG
+2025-05-15 11:21:56 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 11:21:56 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 11:21:56 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 11:22:32 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:22:32 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:22:33 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:29:23 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:29:23 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:29:24 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:30:16 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:30:16 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:30:17 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:32:24 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:32:24 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:32:24 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:33:01 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:33:01 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:33:02 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:34:12 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:34:12 [INFO] Disease Prediction: Test_Disease | Confidence: 95.80% | User: test-user | Image: test_image.jpg
+2025-05-15 11:35:20 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:35:20 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:35:21 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:35:57 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:35:57 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:35:58 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:36:52 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 11:36:52 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 11:36:52 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 11:37:49 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 11:37:49 [INFO] Disease Prediction: Potato___healthy | Confidence: 97.22% | User: anonymous | Image: b6ed456f-bede-4493-be33-a11e2544dc74.JPG
+2025-05-15 11:37:49 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 11:37:49 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 11:37:49 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 11:39:47 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 11:39:47 [INFO] Disease Prediction: Potato___healthy | Confidence: 97.63% | User: anonymous | Image: d84cd032-5c11-40d3-9855-da45e68b77f9.JPG
+2025-05-15 11:39:47 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 11:39:47 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 11:39:47 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 12:15:04 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 12:15:04 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 12:15:05 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 12:17:10 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 12:17:10 [INFO] Disease Prediction: Potato___healthy | Confidence: 99.40% | User: anonymous | Image: c39ed695-6b6b-4778-84ec-dc3e62a01898.JPG
+2025-05-15 12:17:10 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 12:17:10 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 12:17:10 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 13:11:41 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 13:11:41 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 13:11:41 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 13:11:43 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 13:11:43 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 13:11:44 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 13:12:32 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 13:12:32 [INFO] Disease Prediction: Potato___healthy | Confidence: 97.23% | User: anonymous | Image: 7491c577-b97c-4d91-acd8-585d4299e211.JPG
+2025-05-15 13:12:32 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 13:12:32 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 13:12:32 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 14:04:40 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 14:04:40 [INFO] Disease Prediction: Potato___healthy | Confidence: 96.66% | User: anonymous | Image: 6a0648b8-8d16-4a11-906b-b40e33fa3af3.JPG
+2025-05-15 14:04:40 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 14:04:40 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 14:04:40 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 14:06:48 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 14:06:48 [INFO] Disease Prediction: Potato___healthy | Confidence: 96.62% | User: anonymous | Image: 7c75ca19-450f-4c8e-9aab-fd0fcced8fcf.JPG
+2025-05-15 14:06:48 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 14:06:48 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 14:06:48 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 14:26:54 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-15 14:26:54 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-15 14:26:55 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-15 14:31:05 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 14:31:05 [INFO] Disease Prediction: Potato___healthy | Confidence: 98.97% | User: anonymous | Image: e70b044d-4ed3-4016-bbbd-835f2b725118.JPG
+2025-05-15 14:31:05 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 14:31:05 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 14:31:05 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 15:04:53 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 15:04:54 [INFO] Disease Prediction: Potato___healthy | Confidence: 98.16% | User: anonymous | Image: 52be9947-97be-470b-af3b-a96c79e85793.JPG
+2025-05-15 15:04:54 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 15:04:54 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 15:04:54 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-15 15:13:55 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-15 15:13:55 [INFO] Disease Prediction: Potato___healthy | Confidence: 99.09% | User: anonymous | Image: fba5ed96-066b-4839-bf4b-bcaa0fdf2f24.jpeg
+2025-05-15 15:13:55 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-15 15:13:55 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-15 15:13:55 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-27 22:36:04 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-27 22:36:04 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-27 22:36:04 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-27 22:36:07 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-27 22:36:07 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-27 22:36:07 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-27 22:46:10 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-27 22:46:10 [ERROR] Error logging to Elasticsearch directly: AuthenticationException(401, 'security_exception', 'unable to authenticate user [elastic] for REST request [/datelogs/_doc]')
+2025-05-27 22:46:10 [INFO] Disease Prediction: Peach___Bacterial_spot | Confidence: 96.82% | User: anonymous | Image: 2a4b1aff-1e13-4d29-8b21-c1088c3f0bb0.png
+2025-05-27 22:46:10 [ERROR] Error logging to Elasticsearch directly: AuthenticationException(401, 'security_exception', 'unable to authenticate user [elastic] for REST request [/datelogs/_doc]')
+2025-05-27 22:46:10 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-27 22:46:10 [ERROR] Error logging to Elasticsearch directly: AuthenticationException(401, 'security_exception', 'unable to authenticate user [elastic] for REST request [/datelogs/_doc]')
+2025-05-27 22:46:10 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-27 22:46:10 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-27 22:46:11 [ERROR] Error logging to Elasticsearch directly: AuthenticationException(401, 'security_exception', 'unable to authenticate user [elastic] for REST request [/datelogs/_doc]')
+2025-05-27 22:46:11 [ERROR] Error logging to Elasticsearch directly: AuthenticationException(401, 'security_exception', 'unable to authenticate user [elastic] for REST request [/datelogs/_doc]')
+2025-05-27 22:54:38 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-27 22:54:38 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-27 22:54:39 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-27 22:54:41 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-27 22:54:41 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-27 22:54:41 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-27 22:55:50 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-27 22:55:50 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-27 22:55:50 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-27 22:55:52 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-27 22:55:52 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-27 22:55:53 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-27 22:57:58 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-27 22:57:58 [ERROR] Error logging to Elasticsearch directly: AuthenticationException(401, 'security_exception', 'unable to authenticate user [elastic] for REST request [/datelogs/_doc]')
+2025-05-27 22:57:58 [INFO] Disease Prediction: Pepper,_bell___Bacterial_spot | Confidence: 95.76% | User: anonymous | Image: 059ee334-4946-4aa2-a071-10ca30ddf687.png
+2025-05-27 22:57:58 [ERROR] Error logging to Elasticsearch directly: AuthenticationException(401, 'security_exception', 'unable to authenticate user [elastic] for REST request [/datelogs/_doc]')
+2025-05-27 22:57:58 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-27 22:57:58 [ERROR] Error logging to Elasticsearch directly: AuthenticationException(401, 'security_exception', 'unable to authenticate user [elastic] for REST request [/datelogs/_doc]')
+2025-05-27 22:57:58 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-27 22:57:58 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-27 22:57:58 [ERROR] Error logging to Elasticsearch directly: AuthenticationException(401, 'security_exception', 'unable to authenticate user [elastic] for REST request [/datelogs/_doc]')
+2025-05-27 22:57:58 [ERROR] Error logging to Elasticsearch directly: AuthenticationException(401, 'security_exception', 'unable to authenticate user [elastic] for REST request [/datelogs/_doc]')
+2025-05-27 23:23:45 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-27 23:23:45 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-27 23:23:46 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-27 23:23:49 [INFO] Connected to Elasticsearch at localhost:9200
+2025-05-27 23:23:49 [INFO] Loading model from path: models/inception_v3_direct.pth
+2025-05-27 23:23:50 [INFO] Successfully loaded model from models/inception_v3_direct.pth
+2025-05-27 23:24:58 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-27 23:24:59 [INFO] Disease Prediction: Peach___Bacterial_spot | Confidence: 98.06% | User: anonymous | Image: 67f16272-74c1-4658-9a10-cb7bb866e40a.png
+2025-05-27 23:24:59 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-27 23:24:59 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-27 23:24:59 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-27 23:26:12 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-27 23:26:12 [INFO] Disease Prediction: Pepper,_bell___Bacterial_spot | Confidence: 95.90% | User: anonymous | Image: 415b811f-0ca6-4f08-bba6-ffefefa3a32e.png
+2025-05-27 23:26:12 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-27 23:26:12 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-27 23:26:12 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
+2025-05-27 23:26:27 [INFO] API Request: POST api/detect | Status: 0 | User: anonymous
+2025-05-27 23:26:27 [INFO] Disease Prediction: Potato___healthy | Confidence: 95.57% | User: anonymous | Image: 5835d7ce-1108-40c1-9dee-e9e76bfe1dc6.jpeg
+2025-05-27 23:26:27 [INFO] API Request: POST /api/detect | Status: 200 | User: anonymous
+2025-05-27 23:26:27 [INFO] API Request: unknown unknown | Status: 200 | User: anonymous
+2025-05-27 23:26:27 [INFO] API Request: POST api/detect | Status: 200 | User: anonymous
